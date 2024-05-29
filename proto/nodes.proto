@@ -1,0 +1,13 @@
+syntax = "proto3";
+option go_package = "./github.com/dvirgilad/grpcNode";
+service NodeService {
+  rpc GetNodes(NodeRequest) returns (NodeResponse) {}
+}
+
+message NodeRequest {}
+message Node {
+  string Name = 1;
+  string Version = 2;
+  bool Ready = 3;
+}
+message NodeResponse { repeated Node Nodes = 1; }
