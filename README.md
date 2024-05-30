@@ -9,13 +9,14 @@ This is a PoC of an application using gRpc to work with the k8s API using client
     cd k8s-grpc
 ```
 * Run the server
-    In a server with a valid `.kubecontext` file:
+In a server with a valid `.kubecontext` file :
 ```bash
     go run server/main/main.go
 ```
-    The default port to access the server is 9999
+The default port to access the server is 9999
+
 * Run the client:
-    Change line 15 in client/main/main.go to point to the server
+Change line 15 in client/main/main.go to point to the server
 ```bash
     go run client/main/main.go  
 ```
